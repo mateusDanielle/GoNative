@@ -1,0 +1,2 @@
+//init project 
+terminal -> react-native init {NomeApp}
