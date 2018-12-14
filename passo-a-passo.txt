@@ -7,3 +7,6 @@ terminal -> react-native run-ios
 terminal -> react-native start
 //react-native start --reset-cache
 //react-native link
+
+//propTypes
+terminal -> yarn add prop-types
