@@ -1,2 +1,9 @@
 //init project 
 terminal -> react-native init {NomeApp}
+
+//run
+terminal -> react-native run-ios
+//depois de instalando agora é só startar
+terminal -> react-native start
+//react-native start --reset-cache
+//react-native link
