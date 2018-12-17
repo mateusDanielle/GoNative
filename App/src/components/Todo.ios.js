@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  Platform, StyleSheet, Text, View,
-} from 'react-native';
+import { Text, View } from 'react-native';
 
 export default class Todo extends Component {
   static defaultProps = {
@@ -22,5 +20,3 @@ export default class Todo extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({});

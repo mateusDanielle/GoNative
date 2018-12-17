@@ -2,8 +2,11 @@ import './config/ReactotronConfig';
 import './config/DevToolsConfig';
 
 import React, { Component } from 'react';
-import { StyleSheet, View, Button } from 'react-native';
+import {
+  StyleSheet, View, Button, Platform, Text,
+} from 'react-native';
 
+// eslint-disable-next-line import/no-unresolved
 import Todo from '~/components/Todo';
 
 const bgColor = '#F5FCFF';
@@ -14,6 +17,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: bgColor,
+  },
+  text: {
+    ...Platform.select({
+      ios: {
+        fontWeight: 'bold',
+      },
+      android: {
+        fontSize: 24,
+      },
+    }),
   },
 });
 
@@ -34,6 +47,11 @@ export default class App extends Component {
         {/* {this.state.todos.map(todo => {
           return(<Todo title={todo} />)
         })} */}
+        {Platform.OS === 'ios' ? (
+          <Text style={styles.text}>iOS</Text>
+        ) : (
+          <Text style={styles.text}>Android</Text>
+        )}
         {todos.map(todo => (
           <Todo key={todo.id} title={todo.text} />
         ))}
