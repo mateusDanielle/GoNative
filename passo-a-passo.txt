@@ -20,3 +20,8 @@ criar : src/config/ReactotronConfig.js
 yarn add eslint -D
 yarn eslint --init
 yarn add babel-eslint eslint-plugin-react-native -D
+
+//React Devtools
+yarn add react-devtools -D
+criar : src/config/DevToolsConfig.js
+adiciona Script "react-devtool"
