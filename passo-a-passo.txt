@@ -10,3 +10,8 @@ terminal -> react-native start
 
 //propTypes
 terminal -> yarn add prop-types
+
+//Debug reactotron
+terminal -> yarn add reactotron-react-native
+criar : src/config/ReactotronConfig.js
+//Se estiver usando USB no configure passar o host (Ip da maquina) { host: '192...' }
