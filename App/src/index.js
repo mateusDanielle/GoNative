@@ -4,7 +4,7 @@ import './config/DevToolsConfig';
 import React, { Component } from 'react';
 import { StyleSheet, View, Button } from 'react-native';
 
-import Todo from './components/Todo';
+import Todo from '~/components/Todo';
 
 const bgColor = '#F5FCFF';
 

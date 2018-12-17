@@ -25,3 +25,10 @@ yarn add babel-eslint eslint-plugin-react-native -D
 yarn add react-devtools -D
 criar : src/config/DevToolsConfig.js
 adiciona Script "react-devtool"
+
+//manipulação de pastas
+yarn add babel-plugin-root-import -D
+altera BabelRc
+yarn add eslint-import-resolver-babel-plugin-root-import -D
+atualizar .eslint.json
+criar jsconfig.json
