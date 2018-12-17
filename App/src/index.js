@@ -1,30 +1,39 @@
-import "./config/ReactotronConfig";
+import './config/ReactotronConfig';
 
-import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View, Button } from "react-native";
+import React, { Component } from 'react';
+import { StyleSheet, View, Button } from 'react-native';
 
-import Todo from "./components/Todo";
+import Todo from './components/Todo';
 
-console.tron.log("Teste");
+const bgColor = '#F5FCFF';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: bgColor,
+  },
+});
 
 export default class App extends Component {
   state = {
-    todos: [
-      { id: 0, text: "Fazer café" },
-      { id: 1, text: "Estudar o GoNative" }
-    ]
+    todos: [{ id: 0, text: 'Fazer café' }, { id: 1, text: 'Estudar o GoNative' }],
   };
+
   AddTodo = () => {
-    this.setState({ todos: [...this.state.todos, "Novo todo"] });
+    const { todos } = this.state;
+    this.setState({ todos: [...todos, 'Novo todo'] });
   };
 
   render() {
+    const { todos } = this.state;
     return (
       <View style={styles.container}>
         {/* {this.state.todos.map(todo => {
           return(<Todo title={todo} />)
         })} */}
-        {this.state.todos.map(todo => (
+        {todos.map(todo => (
           <Todo key={todo.id} title={todo.text} />
         ))}
         <Button title="Adicionar todo" onPress={this.AddTodo} />
@@ -32,12 +41,3 @@ export default class App extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
-  }
-});

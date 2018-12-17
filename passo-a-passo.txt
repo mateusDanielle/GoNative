@@ -15,3 +15,8 @@ terminal -> yarn add prop-types
 terminal -> yarn add reactotron-react-native
 criar : src/config/ReactotronConfig.js
 //Se estiver usando USB no configure passar o host (Ip da maquina) { host: '192...' }
+
+//eslint
+yarn add eslint -D
+yarn eslint --init
+yarn add babel-eslint eslint-plugin-react-native -D
